@@ -1,0 +1,56 @@
+{% extends 'orders/layout.html' %}
+
+{% load static %}
+
+
+{% block title %}
+Заказ {{ dorder.ord_id }}
+{% endblock %}
+
+{% block content %}
+
+<div class="features">
+<h1>Заказ №{{ dorder.ord_id }}</h1><br>
+<p><b><i><u>Заказчик:</u></i></b> {{ dorder.username }}</p>
+<p><b><i><u>Тип:</u></i></b> {{ dorder.type }} </p>
+<p><b><i><u>Профиль:</u></i></b> {{ dorder.prof }} </p>
+<p><b><i><u>Предмет:</u></i></b> {{ dorder.predm }} </p>
+<p><b><i><u>Комментарий:</u></i></b> {{ dorder.info }} </p>
+<p><b><i><u>Оформление:</u></i></b> {{ dorder.oforml }} </p>
+<p><b><i><u>Дата сдачи:</u></i></b> {{ dorder.date }} </p>
+<p><b><i><u>Время сдачи:</u></i></b> {{ dorder.time }} </p>
+<p><b><i><u>Окончание контроля:</u></i></b> {{ dorder.end_contr }} </p>
+<p><b><i><u>Цена заказчика:</u></i></b> {{ dorder.price }} </p>
+<p><b><i><u>Ссылки на прикрипленные файлы:</u></i></b></p>
+    <p>{{ dorder.links }}</p><br>
+
+    <div class="abuttons">
+<a href="{% url 'delete_o' dorder.ord_id %}" class="btn btn-danger">Удалить</a>
+<a href="{% url 'update_o' dorder.ord_id %}" class="btn btn-info">Редактировать</a><br>
+</div>
+    <br>
+<div>
+<h4>Оценки авторов</h4>
+
+<table class="ordersT">
+    <tr class="ordersC">
+      <th>Номер</th>
+        <th>Автор</th>
+      <th>Цена</th>
+      <th>Комментарий</th>
+        <th>Назначить</th>
+    </tr>
+
+{% for el in auth %}
+            <tr>
+                <td class="ordersD">{{el.ord_id}}</td>
+                <td class="ordersD"><a href="https://t.me/{{el.auth_username}}">{{el.auth_username}}</a></td>
+                <td class="ordersD">{{el.price}}</td>
+                <td class="ordersD">{{el.com}}</td>
+                <td class="ordersD"><a href="{% url 'confirm' %}?id={{ el.ord_id }}?auth={{ el.tel_id }}" class="btn btn-primary" role="button" >Назначить</a></td>
+                </tr>
+        {% endfor %}
+</table>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'orders/layout.html' %}
+
+{% block title %}
+Редактирование заказа
+{% endblock %}
+
+{% block content %}
+<h1>Редактирование заказа</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.type }}<br>
+    {{ form.prof }}<br>
+    {{ form.predm }}<br>
+    {{ form.info }}<br>
+    {{ form.oforml }}<br>
+    {{ form.date }}<br>
+    {{ form.time }}<br>
+    {{ form.end_contr }}<br>
+    {{ form.price }}<br>
+    {{ form.links }}<br>
+    {{ form.username }}<br>
+        {{ form.author }}<br>
+    {{ form.author_links }}<br>
+
+    <button class="btn btn-success" type="submit">Обновить</button>
+
+</form>
+
+{% endblock %}

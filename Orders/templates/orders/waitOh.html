@@ -1,0 +1,34 @@
+{% extends 'orders/layout.html' %}
+
+{% block title %}
+Ожидающие проверку
+{% endblock %}
+
+{% block content %}
+<h1>Проверка</h1>
+
+<div class="ordtable">
+<table class="ordersT">
+    <tr class="ordersC">
+      <th>Номер</th>
+        <th>Заказчик</th>
+      <th>Тип</th>
+      <th>Предмет</th>
+        <th>Срок сдачи</th>
+        <th>Комментарий</th>
+        <th>Подробнее</th>
+    </tr>
+   {% for el in order %}
+            <tr>
+                <td class="ordersD">{{el.ord_id}}</td>
+                <td class="ordersD"><a href="https://t.me/{el.username}">https://t.me/{{el.username}}</a></td>
+                <td class="ordersD">{{el.type}}</td>
+                <td class="ordersD">{{el.predm}}</td>
+                <td class="ordersD">{{el.date}}</td>
+                <td class="ordersD">{{el.info}}</td>
+                <td class="ordersD"><a href="{% url 'detail_wo' el.ord_id %}" class="btn btn-warning">Подробнее</a></td>
+            </tr>
+        {% endfor %}
+ </table>
+</div>
+{% endblock %}

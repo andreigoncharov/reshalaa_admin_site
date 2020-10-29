@@ -1,0 +1,15 @@
+{% extends 'orders/layout.html' %}
+
+{% block title %}
+Удаление заказа
+{% endblock %}
+
+{% block content %}
+<h1>Удаление заказа</h1>
+<form method="post">
+    {% csrf_token %}
+    <h3>Вы действительно хотите удалить заказ?</h3>
+    <a href="{% url 'wo' %}"><button class="btn btn-success">Удалить</button></a>
+</form>
+
+{% endblock %}

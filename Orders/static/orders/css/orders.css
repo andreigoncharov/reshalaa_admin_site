@@ -1,0 +1,172 @@
+title{
+    float:center;
+    color:#fff;
+}
+
+body{
+    background: #2c2c2c;
+}
+
+h1{
+    text-align: center;
+    color:#fff;
+}
+
+h3{
+    text-align: left;
+    color:#fff;
+    font-size:20px;
+}
+
+h4{
+    text-align: center;
+    color:#fff;
+    font-size:30px;
+}
+
+p{
+    margin-left: 21%;
+    color:#fff;
+    font-size:18px;
+}
+
+aside{
+    float:left;
+    background:181818;
+    width:20%;
+    padding:2.5%;
+    min-height: 100vh;
+    color:#fff;
+    border-right: 5px solid #4d4d4d;
+    position: fixed;
+    z-index: 101;
+}
+
+aside img{
+    width:80px;
+    float:left;
+}
+
+aside .logo{
+    font-size: 30px;
+    margin-left: 85px;
+    font-weight: bold;
+    position: relative;
+    top: -65px;
+}
+
+aside h3{
+    margin-top:-30px;
+    font-size:25px;
+    font-weight: bold;
+}
+
+aside ul{list-style: none}
+
+aside ul li{
+    color: #fff;
+    display: block;
+    margin-left: -30px;
+    transition :all .6s;
+}
+aside ul li:hover, aside ul a:hover{
+    color:#eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+table.ordersT{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 20px;
+    margin: auto;
+}
+
+tr.ordersC{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}
+
+td.ordersD{
+    background: #F2F5A9;
+    padding: 10px;
+    text-align: center;
+}
+
+form{
+    margin-left: 35%;
+    width: 500px;
+    margin-top: 50px;
+    float:center;
+}
+main .features{
+    float: left;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 5%;
+    width:75%
+}
+
+main .abuttons{
+    margin-left: 25%;
+}
+
+main .ordtable{
+ float: left;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 21%;
+    width:78%
+}
+
+main .featuresP{
+    float: left;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 15%;
+    width:75%
+}
+
+main .featuresO{
+float: left;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 21%;
+    width:78%
+}
+
+table.buttons{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 20px;
+    margin: auto;
+}
+
+table.ordersA{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 20px;
+    margin: auto;
+    margin-left: 21%;
+}
+tr.ordersAC{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}

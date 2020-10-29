@@ -1,0 +1,27 @@
+{% extends 'orders/layout.html' %}
+
+{% block title %}
+Заказ
+{% endblock %}
+
+{% block content %}
+
+<div class="features">
+<h1>Заказ №{{ dorder.ord_id }}</h1><br>
+<p><b><i><u>Заказчик:</u></i></b> {{ dorder.username }}</p>
+<p><b><i><u>Тип:</u></i></b> {{ dorder.type }} </p>
+<p><b><i><u>Профиль:</u></i></b> {{ dorder.prof }} </p>
+<p><b><i><u>Предмет:</u></i></b> {{ dorder.predm }} </p>
+<p><b><i><u>Комментарий:</u></i></b> {{ dorder.info }} </p>
+<p><b><i><u>Оформление:</u></i></b> {{ dorder.oforml }} </p>
+<p><b><i><u>Дата сдачи:</u></i></b> {{ dorder.date }} </p>
+<p><b><i><u>Время сдачи:</u></i></b> {{ dorder.time }} </p>
+<p><b><i><u>Окончание контроля:</u></i></b> {{ dorder.end_contr }} </p>
+<p><b><i><u>Цена:</u></i></b> {{ dorder.price }} </p>
+<p><b><i><u>Ссылки на прикрипленные файлы:</u></i></b> {{ dorder.links }}
+</p><p><b><i><u>Ссылки на файлы решения:</u></i></b> {{ dorder.author_links }} </p>
+    <div class="abuttons">
+<a href="{% url 'update_wo' dorder.ord_id %}" class="btn btn-info">Редактировать файлы</a><br>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'orders/layout.html' %}
+
+{% block title %}
+Подтверждение цены
+{% endblock %}
+
+{% block content %}
+<h1>{{ head_text }}</h1>
+<div class="featuresO">
+
+<table class="ordersT">
+    <tr class="ordersC">
+      <th>Номер</th>
+        <th>Заказчик</th>
+        <th>Автор</th>
+        <th>Цена для заказчика</th>
+        <th>Цена автора</th>
+    </tr>
+   {% for el in order %}
+            <tr>
+                <td class="ordersD">{{el.ord_id}}</td>
+                <td class="ordersD"><a href="https://t.me/{{el.customer_username}}">https://t.me/{{el.customer_username}}</a></td>
+                <td class="ordersD"><a href="https://t.me/{{el.auth_username}}">https://t.me/{{el.auth_username}}</a></td>
+                <td class="ordersD">{{el.customer_pr}}</td>
+                <td class="ordersD">{{el.price}}</td>
+            </tr>
+        {% endfor %}
+ </table>
+</div>
+{% endblock %}

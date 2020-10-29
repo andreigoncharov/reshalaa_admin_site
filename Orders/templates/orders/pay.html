@@ -1,0 +1,31 @@
+{% extends 'orders/layout.html' %}
+
+{% block title %}
+Неоплаченные заказы
+{% endblock %}
+
+{% block content %}
+<h1>Неполаченные работы авторов</h1>
+<div class="ordtable">
+<table class="ordersT">
+    <tr class="ordersC">
+      <th>Номер ||  </th>
+        <th>Автор ||  </th>
+      <th>ФИО ||  </th>
+        <th>Номер карты ||  </th>
+        <th>Стоимость ||  </th>
+        <th>-----  ||  -----</th>
+    </tr>
+   {% for el in info %}
+            <tr>
+                <td class="ordersD">{{el.ord_id}}</td>
+                <td class="ordersD"><a href="https://t.me/{el.username}">https://t.me/{{el.username}}</a></td>
+                <td class="ordersD">{{el.fio}}</td>
+                <td class="ordersD">{{el.card_num}}</td>
+                <td class="ordersD">{{el.cost}}</td>
+                <td class="ordersD"><a href="{% url 'payok' %}?id={{ el.ord_id }}" class="btn btn-primary" role="button" >Оплачено</a></td>
+            </tr>
+        {% endfor %}
+ </table>
+</div>
+{% endblock %}
